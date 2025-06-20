@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="todo-header">
+      <h1>📝 My To-Do List</h1>
+      <button class="contact-btn" onclick="toggleContact()">Contact</button>
+    </div>
+
+    <div class="input-box">
+      <input type="text" id="taskInput" placeholder="Add your task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div class="contact-form-wrapper" id="contactFormWrapper">
+    <form class="contact-form" onsubmit="return handleContactSubmit()">
+      <h2>☎️ Contact Us</h2>
+      <input type="text" id="contactName" placeholder="Your Name" required />
+      <input type="email" id="contactEmail" placeholder="Your Email" required />
+      <button type="submit">Submit</button>
+      <p id="contactMessage"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
